@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+      <div class="card text-dark bg-primary" style="border-color:black;">
+        <img class="card-img-top" src="" alt="">
+        <div class="card-body">
+          <h4 class="card-title">Upload Image</h4>
+          <p class="card-text" style="color:brown;font-weight:500;">File Type Allowed: jpg,png,jpeg </p>
+          <div class="card" style="border-color:black; padding: 10px 10px 0px 10px;">  
+            <form action="" method="post" enctype=multipart/form-data>
+              <input type="file" name="file" id="" placeholder="File Name" aria-describedby="fileHelpId">
+              <div class="d-flex justify-content-center" style="margin: 10px 0px 5px 0px;"><button type="submit" class="btn btn-primary" name="action" value="upload">Submit</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="background-color:beige; border-color:black;">
+        {% if image and result1 and result2: %}
+        
+        <img class="card-img-top" src={{image}} alt="">
+        <div class="card-body">
+          {% for key in result1%}
+          <h4 class="card-title">This looks like a {{key}} Score:{{result1[key]}} </h4>
+          {% endfor %}
+          
+          <h5 class="card-title">Can also be:</h4>
+          <p class="card-text">
+            {% for name,score in result2.items()%}
+                {{name}}               Score={{score}}
+                <br>
+            {% endfor %}
+          </p>
+        </div>
+        {% endif %}
+      </div>
+      
+    </div> 
+  </div>
+</div>
+{% endblock %}
+
+
