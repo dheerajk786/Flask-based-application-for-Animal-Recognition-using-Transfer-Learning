@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
+<br>
 <div class="container-fluid">
+  {% include "notify.html" %}
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="card text-dark" style="background-color: rgb(140, 198, 231) ;border-color:black;">
@@ -17,11 +19,10 @@
         </div>
       </div>
     </div>
+    {% if image and result1 and result2: %}
     <div class="col-md-6">
       <div class="card" style="background-color:beige; border-color:black;">
-        {% if image and result1 and result2: %}
-        
-        <img class="card-img-top" src={{image}} alt="">
+        <img class="card-img-top" src="{{image}}" alt="">
         <div class="card-body">
           {% for key in result1%}
           <h4 class="card-title">This looks like a {{key}} Score:{{result1[key]}} </h4>

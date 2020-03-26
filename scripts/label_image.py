@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings('ignore')
 import tensorflow as tf, sys
 import os
 # image_path = sys.argv[1]
