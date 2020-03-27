@@ -27,7 +27,7 @@ def login():
             user = User.query.filter_by(username=username).first()
             if user is None or not user.check_password(password):
                 flash('Invalid username or password','danger')
-                return redirect(url_for('login'))
+                return render_template('login.html')
             login_user(user, remember=True)
             return redirect(url_for('uploadpredict'))
     return render_template('login.html', title='Sign In')
