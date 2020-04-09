@@ -12,12 +12,11 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/',methods=['GET', 'POST'])
+@app.route('/')
 # @app.route('/index')
 # @login_required
 # def index():
 #     return render_template('index.html',title='home')
-
 @app.route('/login',methods=['GET', 'POST'])
 def login():
     if request.method=='POST':
