@@ -12,7 +12,7 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-@app.route('/')
+@app.route('/',methods=['GET', 'POST'])
 # @app.route('/index')
 # @login_required
 # def index():
