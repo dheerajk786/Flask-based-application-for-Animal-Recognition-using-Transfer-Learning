@@ -1,4 +1,5 @@
-cat
-dog
+elephant
+giraffe
+lion
 monkey
 squirrel
