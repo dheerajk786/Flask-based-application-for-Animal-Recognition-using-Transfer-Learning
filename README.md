@@ -5,9 +5,9 @@
 > pip install -r requirements.txt
 
 ## To run the application:
-1.> flask db migrate
-2.> flask db upgrade
-3.> flask run
+>1.flask db migrate
+>2.flask db upgrade
+>3.flask run
 
 ## For Training the model on new animals:
 1. Update the images with the animal name inside tf_files/animals
