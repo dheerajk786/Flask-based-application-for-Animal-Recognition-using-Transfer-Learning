@@ -2,4 +2,4 @@ flask-sqlalchemy
 flask-migrate
 python-dotenv
 flask-login
-tensorflow==1.7.*
+tensorflow==1.14
