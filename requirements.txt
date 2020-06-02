@@ -3,7 +3,7 @@ flask-migrate
 python-dotenv
 flask-login
 <<<<<<< HEAD
-tensorflow==1.14
+tensorflow==1.15
 =======
 tensoflow-gpu==1.14
 >>>>>>> bc7b79553e4c9fd14364ecd8f12f1f14cddff80c
